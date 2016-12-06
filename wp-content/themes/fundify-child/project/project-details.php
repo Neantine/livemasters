@@ -38,18 +38,17 @@ $prefix = idf_get_querystring_prefix();
 	<div class="right-side">
 		<ul class="campaign-stats">
 
-			<?php /*
+			<li><?php printf( __( '<strong>%s</strong> Funded', 'fundify' ), $hDeck->percentage.'%' ); ?></li>
 			<li class="progress">
-				<h3><?php echo $hDeck->total; ?></h3>
-				<p><?php printf( __( 'Pledged of %s Goal', 'fundify' ), $hDeck->goal ); ?></p>
+<!--				<h3>--><?php //echo $hDeck->percentage; ?><!--</h3>-->
+<!--				<p>--><?php //printf( __( 'Pledged of %s Goal', 'fundify' ), $hDeck->goal ); ?><!--</p>-->
 
 				<div class="bar"><span style="width: <?php echo $hDeck->percentage; ?>%"></span></div>
 			</li>
- 			*/ ?>
 
 			<li class="backer-count">
 				<h3><?php echo $hDeck->pledges; ?></h3>
-				<p><?php echo _nx( 'Backer', 'Backers', $hDeck->pledges, 'number of backers for campaign', 'fundify' ); ?></p>
+				<p><?php echo _nx( 'Fan', 'Fans', $hDeck->pledges, 'number of backers for campaign', 'fundify' ); ?></p>
 			</li>
 			<?php if ( $hDeck->end_type == 'closed' ) : ?>
 			<li class="days-remaining">
