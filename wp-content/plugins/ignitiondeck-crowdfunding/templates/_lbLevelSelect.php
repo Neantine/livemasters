@@ -12,7 +12,7 @@
 	<div class="project_image" style="background-image: url(<?php echo $image; ?>);"><div class="aspect_ratio_maker"></div></div>
 	<div class="lb_wrapper">
 		<div class="form_header">
-			<strong><?php _e('Step 1:', 'ignitiondeck'); ?></strong> <?php _e('Specify your contribution amount for', 'ignitiondeck'); ?> <em><?php echo get_the_title($post_id); ?></em>
+			<strong><?php _e('Step 1:', 'ignitiondeck'); ?></strong> <?php _e('Specify your contribution level for', 'ignitiondeck'); ?> <em><?php echo get_the_title($post_id); ?></em>
 		</div>
 		<div class="form">
 			<form action="<?php echo (isset($action) ? $action : ''); ?>" method="POST" name="idcf_level_select">
@@ -34,15 +34,17 @@
 						</span>
 					</label>
 				</div>
-				<div class="form-row inline third total">
-					<label for="total"><?php _e('Total', 'ignitiondeck'); ?></label>
-					<!-- <div class="id-currency-symbol"><?php echo apply_filters('id_lightbox_currency_symbol', $the_deck->cCode, $post_id, $the_deck); ?></div> -->
-					<?php if (isset($pwyw) && $pwyw) { ?>
-						<input type="text" class="total" name="total" id="total" value="<?php // echo total; ?>" placeholder="<?php echo apply_filters('id_display_currency', (isset($level_data[0]) ? $level_data[0]->meta_price : 0), $post_id); ?>" />
-					<?php } else { ?>
-						<span name="total" class="total" data-value=""></span>
-					<?php } ?>
-				</div>
+
+					<div class="form-row inline third total">
+						<label for="total"><?php _e('Total', 'ignitiondeck'); ?></label>
+						<!-- <div class="id-currency-symbol"><?php echo apply_filters('id_lightbox_currency_symbol', $the_deck->cCode, $post_id, $the_deck); ?></div> -->
+						<?php if (isset($pwyw) && $pwyw) { ?>
+							<input type="text" class="total" name="total" id="total" value="<?php // echo total; ?>" placeholder="<?php echo apply_filters('id_display_currency', (isset($level_data[0]) ? $level_data[0]->meta_price : 0), $post_id); ?>" />
+						<?php } else { ?>
+							<span name="total" class="total" data-value=""></span>
+						<?php } ?>
+					</div>
+
 				<div class="form-row text">
 					<p>
 						<?php // echo description; ?>

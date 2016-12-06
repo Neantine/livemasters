@@ -77,7 +77,7 @@ get_header(); ?>
 														</h3>
 														<div class="backers">
 															<div class="backer-count">
-																<i class="icon-user"></i> <?php echo $level->meta_count; ?> <?php _e('Backers', 'fundify'); ?>
+																<i class="icon-user"></i> <?php echo $level->meta_count; ?> <?php _e('Fans', 'fundify'); ?>
 															</div>
 														</div>
 														<p><?php echo $level->meta_short_desc; ?></p>
