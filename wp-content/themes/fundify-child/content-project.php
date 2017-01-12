@@ -15,7 +15,33 @@ if ($project_id > 0) {
 	$closed = $project->project_closed();
 	$deck = new Deck($project_id);
 	$mini_deck = $deck->mini_deck();
+
+	//Compute nb of fan to reach using average level amount
+
+	$nb_fans_to_reach = 0;
+	$level_nb = 0;
+	$level_avg_amount = 0;
+
+	if (!empty($deck)) {
+		$the_deck = $deck->the_deck();
+		if (!empty($the_deck)) {
+			$levels = $deck->the_deck()->level_data;
+
+			if (!empty($levels)) {
+				foreach ($levels as $level) {
+					$level_nb += 1;
+					$level_avg_amount += $level->meta_price;
+				}
+
+				$level_avg_amount = $level_avg_amount / $level_nb;
+				$nb_fans_to_reach = floor($project->the_goal() / ($level_avg_amount));
+			}
+
+		}
+	}
+
 }
+
 
 ?>
 
@@ -66,8 +92,9 @@ if ($project_id > 0) {
 	<div class="digits">
 		<div class="bar"><span style="width: <?php echo $mini_deck->rating_per; ?>%"></span></div>
 		<ul>
-			<li><?php printf( __( '<strong>%s</strong> Funded', 'fundify' ), $mini_deck->rating_per.'%' ); ?></li>
-            <li><?php printf( __( '<strong>%s</strong> Fans', 'fundify' ), $mini_deck->p_count->p_number ); ?></li>
+			<li><?php printf( __( '<strong>%s</strong> Fans', 'fundify' ), $mini_deck->p_count->p_number ); ?></li>
+			<li><?php printf( __( '<strong>%s</strong> Needed', 'fundify' ), $nb_fans_to_reach ); ?></li>
+
 			<?php if ( $mini_deck->end_type == 'closed' ) : ?>
 			<li>
 				<?php if ( $mini_deck->days_left >= 0 && !$closed ) : ?>

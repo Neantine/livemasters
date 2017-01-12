@@ -28,9 +28,10 @@ if ($project_id > 0) {
             $level_nb += 1;
             $level_avg_amount += $level->meta_price;
         }
-    }
-    $level_avg_amount = $level_avg_amount/$level_nb;
-    $nb_fans_to_reach = floor($project->the_goal()/($level_avg_amount));
+
+		$level_avg_amount = $level_avg_amount/$level_nb;
+		$nb_fans_to_reach = floor($project->the_goal()/($level_avg_amount));
+	}
 
 
 	//$the_project = $project->the_project();
@@ -65,7 +66,7 @@ $prefix = idf_get_querystring_prefix();
 			<li class="progress">
 <!--				<h3>--><?php //echo $hDeck->percentage; ?><!--</h3>-->
 
-				<p><?php printf( __( '%s Fans to reach', 'fundify' ), $nb_fans_to_reach ); ?></p>
+				<p><?php printf( __( 'On %s needed', 'fundify' ), $nb_fans_to_reach ); ?></p>
 
 				<div class="bar"><span style="width: <?php echo $hDeck->percentage; ?>%"></span></div>
 			</li>
