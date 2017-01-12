@@ -7,7 +7,7 @@
 Plugin Name: IgnitionDeck
 URI: http://IgnitionDeck.com
 Description: A crowdfunding and ecommerce for WordPress that helps you crowdfund, pre-order, and sell goods online.
-Version: 1.2.14
+Version: 1.2.17
 Author: IgnitionDeck
 Author URI: http://IgnitionDeck.com
 License: GPL2
@@ -17,10 +17,12 @@ define( 'IDF_PATH', plugin_dir_path(__FILE__) );
 
 include_once 'idf-globals.php';
 global $active_plugins, $idf_current_version;
-$idf_current_version = '1.2.14';
+$idf_current_version = '1.2.17';
 include_once 'idf-update.php';
 include_once 'classes/class-idf.php';
+include_once 'classes/class-idf_cache.php';
 include_once 'idf-functions.php';
+include_once 'idf-cache.php';
 include_once 'idf-admin.php';
 include_once 'idf-roles.php';
 include_once 'idf-wp.php';
@@ -36,11 +38,13 @@ if (idf_has_idcf()) {
 register_activation_hook(__FILE__, 'idf_activation');
 
 function idf_activation() {
+	do_action('idf_before_activation');
 	idf_init_set_defaults();
 	idf_init_transfer_key();
 	if (!defined('ID_DEV_MODE') || 'ID_DEV_MODE' == false) {
 		//idf_update_products();
 	}
+	do_action('idf_activation');
 }
 
 function idf_init_set_defaults() {
@@ -52,7 +56,7 @@ function idf_init_set_defaults() {
 	}
 	$version_array = array(
 		'ignitiondeck-crowdfunding/ignitiondeck.php' => '1.5.15',
-		'idcommerce/idcommerce.php' => '1.7.0'
+		'idcommerce/idcommerce.php' => '1.7.2'
 	);
 	set_transient('idf_plugin_versions', $version_array);
 	set_site_transient('update_plugins', null);

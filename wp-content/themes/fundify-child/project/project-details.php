@@ -13,12 +13,35 @@ $project_id = get_post_meta($post_id, 'ign_project_id', true);
 if ($project_id > 0) {
 	$project = new ID_Project($project_id);
 	$deck = new Deck($project_id);
+	$the_deck = $deck->the_deck();
+	if (!empty($the_deck)) {
+		$levels = $the_deck->level_data;
+	}
 	$hDeck = $deck->hDeck();
+
+    //Compute nb of fan to reach using average level amount
+    $nb_fans_to_reach = 0;
+    $level_nb = 0;
+    $level_avg_amount = 0;
+    if (!empty($levels)) {
+        foreach ($levels as $level) {
+            $level_nb += 1;
+            $level_avg_amount += $level->meta_price;
+        }
+    }
+    $level_avg_amount = $level_avg_amount/$level_nb;
+    $nb_fans_to_reach = floor($project->the_goal()/($level_avg_amount));
+
+
 	//$the_project = $project->the_project();
 	$video = get_post_meta($post_id, 'ign_product_video', true);
 	//$end_type = get_post_meta($post_id, 'ign_end_type', true);
 	$closed = $project->project_closed();
 	//$ccode = $project->currency_code();
+
+
+
+
 }
 $prefix = idf_get_querystring_prefix(); 
 ?>
@@ -38,10 +61,11 @@ $prefix = idf_get_querystring_prefix();
 	<div class="right-side">
 		<ul class="campaign-stats">
 
-			<li><?php printf( __( '<strong>%s</strong> Funded', 'fundify' ), $hDeck->percentage.'%' ); ?></li>
+<!--			<li>--><?php //printf( __( '<strong>%s</strong> Funded', 'fundify' ), $hDeck->percentage.'%' ); ?><!--</li>-->
 			<li class="progress">
 <!--				<h3>--><?php //echo $hDeck->percentage; ?><!--</h3>-->
-<!--				<p>--><?php //printf( __( 'Pledged of %s Goal', 'fundify' ), $hDeck->goal ); ?><!--</p>-->
+
+				<p><?php printf( __( '%s Fans to reach', 'fundify' ), $nb_fans_to_reach ); ?></p>
 
 				<div class="bar"><span style="width: <?php echo $hDeck->percentage; ?>%"></span></div>
 			</li>

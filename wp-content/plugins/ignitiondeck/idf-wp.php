@@ -80,15 +80,14 @@ function idf_add_creator_upload_cap() {
 							}
 							if ($pass) {
 								idc_add_upload_cap($user);
+								idf_filter_media_files($user_id);
 							}
 							else {
 								idc_remove_upload_cap($user);
 							}
 						}
 						else if (isset($query_vars['edit-profile']) || array_key_exists('edit-profile', $query_vars)) {
-							add_action('pre_get_posts', function($query) use ($user_id) {
-								$query->set('author', $user_id);
-							});
+							idf_filter_media_files($user_id);
 							add_filter('user_has_cap', 'idf_filter_upload_cap', 10, 3);
 						}
 					}
@@ -198,6 +197,12 @@ function idc_remove_upload_cap($user) {
 			$user->remove_cap('edit_published_posts');
 		}
 	}
+}
+
+function idf_filter_media_files($user_id) {
+	add_action('pre_get_posts', function($query) use ($user_id) {
+		$query->set('author', $user_id);
+	});
 }
 
 function idf_filter_upload_cap($allcaps, $cap, $args) {

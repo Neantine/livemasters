@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: IgnitionDeck Framework\n"
-"POT-Creation-Date: 2016-10-05 20:06-0400\n"
+"POT-Creation-Date: 2017-01-08 11:15-0500\n"
 "PO-Revision-Date: 2016-10-05 20:02-0400\n"
 "Last-Translator: Nathan Hangen <nhangen@gmail.com>\n"
 "Language-Team: IgnitionDeck <hello@virtuousgiant.com>\n"
@@ -28,19 +28,19 @@ msgstr ""
 msgid "Modules"
 msgstr ""
 
-#: .././idf-admin.php:166
+#: .././idf-admin.php:171
 msgid "Your IgnitionDeck Commerce installation is out of date."
 msgstr ""
 
-#: .././idf-admin.php:166
+#: .././idf-admin.php:171
 msgid "Click here"
 msgstr ""
 
-#: .././idf-admin.php:166
+#: .././idf-admin.php:171
 msgid "to update to the latest version."
 msgstr ""
 
-#: .././idf.php:164
+#: .././idf.php:168
 msgid "Update Plugin"
 msgstr ""
 
@@ -72,168 +72,14 @@ msgstr ""
 msgid "Docs"
 msgstr ""
 
-#: .././templates/admin/_idfMenu-old.php:2
-msgid "IgnitionDeck Framework"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:4
-#: .././templates/admin/_idfMenu.php:127 .././templates/admin/_idfMenu.php:130
-msgid "Support"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:5
-#: .././templates/admin/_idfMenu.php:131
-msgid "Documentation"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:12
-msgid "IgnitionDeck Account"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:16
-msgid ""
-"Register for an IgnitionDeck account in order to activate crowdfunding "
-"functionality."
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:17
-msgid "Register"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:20
-msgid ""
-"You have registered successfully, and IgnitionDeck has been installed and "
-"activated."
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:21
-msgid "Here's how to get started using IgnitionDeck:"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:23
-#: .././templates/admin/_idfMenu.php:13
-msgid "Activate Theme 500"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:23
-#: .././templates/admin/_idfMenu.php:13
-msgid ", if you wish to use it"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:24
-msgid "Configure IgnitionDeck Crowdfunding"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:25
-#: .././templates/admin/_idfMenu.php:15
-msgid "Create your first project"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:26
-msgid "Ready to accept pledges"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:26
-msgid "Upgrade to a premium version of the plugins"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:26
-msgid "to activate a payment gateway."
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:27
-msgid ""
-"Use the commerce selector below to choose an eCommerce platform for use with "
-"IgnitionDeck Crowdfunding (IDCF)"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:29 .././templates/admin/_idfMenu.php:8
-msgid "Disconnect Account"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:37
-msgid "IDCF Commerce Settings"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:40
-#: .././templates/admin/_idfMenu.php:81
-msgid "Select a commerce platform for use with IgnitionDeck Crowdfunding"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:41
-msgid ""
-"Note: Use of IgnitionDeck Commerce and/or WooCommerce requires purchase of "
-"an IgnitionDeck License."
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:43
-#: .././templates/admin/_idfMenu.php:84
-msgid "Commerce Platform"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:47
-#: .././templates/admin/_idfMenu.php:88
-msgid "IgnitionDeck Commerce"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:49
-#: .././templates/admin/_idfMenu.php:90
-msgid "WooCommerce"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:51
-#: .././templates/admin/_idfMenu.php:92
-msgid "Easy Digital Downloads"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:53
-#: .././templates/admin/_idfMenu.php:94
-msgid "Legacy IgnitionDeck"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:58
-#: .././templates/admin/_idfMenu.php:100
-msgid "Save"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:67
-#: .././templates/admin/_idfMenu.php:47
-msgid "License Settings"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:70
-#: .././templates/admin/_idfMenu.php:49
-msgid ""
-"Entering your <a href=\"http://ignitiondeck.com/id/documentation/"
-"ignitiondeck-crowdfunding/setup-ignitiondeck/ignitiondeck-license-keys/\" "
-"target=\"_blank\">license key</a> will enable automatic updates via the "
-"WordPress admin for the duration of your license period."
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:74
-#: .././templates/admin/_idfMenu.php:54
-msgid "IDCF License Key"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:80
-#: .././templates/admin/_idfMenu.php:60
-msgid "IDC License Key"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:85
-#: .././templates/admin/_idfMenu.php:65
-msgid "Validate"
-msgstr ""
-
-#: .././templates/admin/_idfMenu-old.php:91
-#: .././templates/admin/_idfMenu.php:71
-msgid " License Valid for"
-msgstr ""
-
 #: .././templates/admin/_idfMenu.php:3
 msgid ""
 "Welcome to the IgnitionDeck platform! Follow the instructions below to get "
 "started selling, fundraising, and crowdfunding."
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:8
+msgid "Disconnect Account"
 msgstr ""
 
 #: .././templates/admin/_idfMenu.php:10
@@ -246,8 +92,20 @@ msgstr ""
 msgid "Here's how to get started"
 msgstr ""
 
+#: .././templates/admin/_idfMenu.php:13
+msgid "Activate Theme 500"
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:13
+msgid ", if you wish to use it"
+msgstr ""
+
 #: .././templates/admin/_idfMenu.php:14
 msgid "Configure IgnitionDeck Crowdfunding and IgnitionDeck Commerce"
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:15
+msgid "Create your first project"
 msgstr ""
 
 #: .././templates/admin/_idfMenu.php:16
@@ -302,8 +160,40 @@ msgstr ""
 msgid "Toggle panel"
 msgstr ""
 
+#: .././templates/admin/_idfMenu.php:47
+msgid "License Settings"
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:49
+msgid ""
+"Entering your <a href=\"http://ignitiondeck.com/id/documentation/"
+"ignitiondeck-crowdfunding/setup-ignitiondeck/ignitiondeck-license-keys/\" "
+"target=\"_blank\">license key</a> will enable automatic updates via the "
+"WordPress admin for the duration of your license period."
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:54
+msgid "IDCF License Key"
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:60
+msgid "IDC License Key"
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:65
+msgid "Validate"
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:71
+msgid " License Valid for"
+msgstr ""
+
 #: .././templates/admin/_idfMenu.php:78
 msgid "Crowdfunding Integration"
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:81
+msgid "Select a commerce platform for use with IgnitionDeck Crowdfunding"
 msgstr ""
 
 #: .././templates/admin/_idfMenu.php:82
@@ -311,15 +201,47 @@ msgid ""
 "Note: Enabling WooCommerce requires the purchase of an IgnitionDeck License."
 msgstr ""
 
+#: .././templates/admin/_idfMenu.php:84
+msgid "Commerce Platform"
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:88
+msgid "IgnitionDeck Commerce"
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:90
+msgid "WooCommerce"
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:92
+msgid "Easy Digital Downloads"
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:94
+msgid "Legacy IgnitionDeck"
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:100
+msgid "Save"
+msgstr ""
+
 #: .././templates/admin/_idfMenu.php:123
 #, php-format
 msgid "View All %d Modules"
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:127 .././templates/admin/_idfMenu.php:130
+msgid "Support"
 msgstr ""
 
 #: .././templates/admin/_idfMenu.php:129
 msgid ""
 "Our support team is available 9am-5pm EST Monday-Friday. Click the links "
 "below to view our step-by-step documentation or visit the support forums."
+msgstr ""
+
+#: .././templates/admin/_idfMenu.php:131
+msgid "Documentation"
 msgstr ""
 
 #: .././templates/admin/_idfMenu.php:132

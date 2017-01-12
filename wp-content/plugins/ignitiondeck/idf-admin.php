@@ -84,6 +84,7 @@ function idf_main_menu() {
 	if (isset($_POST['commerce_submit'])) {
 		$platform = sanitize_text_field($_POST['commerce_selection']);
 		update_option('idf_commerce_platform', $platform);
+		do_action('idf_update_commerce_platform', $platform);
 	}
 	if (isset($_POST['update_idcf'])) {
 		if (file_exists($plugins_path.'ignitiondeck-crowdfunding')) {
@@ -96,7 +97,7 @@ function idf_main_menu() {
 	}
 	// modules list
 	$data = idf_extension_list();
-	$extension_data = array_slice($data, -3);
+	$extension_data = (!empty($data) ? array_slice($data, -3) : array());
 	// upgrades
 	$license_type = 'free';
 	if (idf_has_idcf()) {

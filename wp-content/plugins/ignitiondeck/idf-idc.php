@@ -28,6 +28,7 @@ function idf_idc_license_type($valid) {
 function idf_idc_validate_key($key) {
 	$ch = curl_init('https://www.ignitiondeck.com/id/?action=md_validate_license&key='.$key);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
     $response = curl_exec($ch);
     $response_array = array('valid' => false, 'download' => null);
     if (!$response) {
@@ -35,6 +36,7 @@ function idf_idc_validate_key($key) {
     	curl_close($ch);
     	$ch = curl_init('http://www.ignitiondeck.com/id/?action=md_validate_license&key='.$key);
     	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
     	$response = curl_exec($ch);
     	if (!$response) {
     		// final curl fail

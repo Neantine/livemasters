@@ -2,9 +2,9 @@
 Contributors: virtuousgiant
 Donate link: http://IgnitionDeck.com
 Tags: crowdfunding, crowd, funding, ecommerce, commerce, marketplace, fundraising, donation, membership, downloads
-Requires at least: 3.2
-Tested up to: 4.6
-Stable tag: 1.2.14
+Requires at least: 4.6
+Tested up to: 4.7
+Stable tag: 1.2.17
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,7 +62,7 @@ Here's a look at the features included with IgnitionDeck:
 
 ####IgnitionDeck Echelon####
 
-* Adds additional gateays, including Stripe, PayPal Adaptive, Authorize.net, First Data, Coinbase, Offline Checkout, and more
+* Adds additional gateways, including Stripe, PayPal Adaptive, Authorize.net, First Data, Coinbase, Offline Checkout, and more
 * Enables pre-orders and 100% funding options
 * Recurring payments (weekly, monthly, annually)
 * Adds support for renewals, automatic checkout page creation, subscriptions, expiring accounts, and free products
@@ -127,6 +127,22 @@ Grab code snippets, child theming guides, and API information on our [developer 
 == Screenshots ==
 
 == Changelog ==
+
+= 1.2.17 =
+
+* Add CURLOPT_FOLLOWLOCATION to our cURL protocols in order to account for IgnitionDeck.com migration to https
+
+= 1.2.16 =
+
+* Fix issue causing some PHP installations to error out based on syntax in new IDF_Cache class files
+
+= 1.2.15 =
+
+* Fix issue resulting in media library being accessible by all users when adding or editing avatar
+* New caching class allows us to easily cache any object as transient, and automatically delete them when plugin is uninstalled
+* New actions fire when commerce platform is saved
+* Fix issue with array_slice on extension list when array is empty
+* Minor css updates and fixes
 
 = 1.2.14 =
 

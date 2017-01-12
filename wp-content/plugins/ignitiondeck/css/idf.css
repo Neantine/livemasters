@@ -177,17 +177,14 @@
 	font-weight: bold;
 	cursor: default;
 }
-.idc_lightbox .form-row.total label {
-	padding-bottom: 0;
-}
 .ignitiondeck.idc_lightbox .form-row.total input {
-	line-height: 20px;
+	line-height: 13px;
+	font-size: 13px;
   	margin: 0 0 10px;
-  	padding: 8px 0 5px 8px;
+  	padding: 7px 0;
 	border: 1px solid #e7ebed;
 	color: #90a4ae;
-	float: left;
-	width: 90% !important;
+	float: none;
 	display: inline-block !important;
 }
 

@@ -137,7 +137,7 @@ function idf_idc_delivery($update = false) {
 			$subdomain = '';
 		}
 		$url = $prefix.'://'.$subdomain.'.ignitiondeck.com/idf/idc_latest.zip';
-		if ( ini_get('allow_url_fopen') ) {
+		if (ini_get('allow_url_fopen') ) {
 			$idc = file_get_contents($url);
 		} else {
 			$idc_curl = curl_init();
@@ -171,7 +171,7 @@ function idf_idcf_delivery($update = false) {
 			$subdomain = '';
 		}
 		$url = $prefix.'://'.$subdomain.'.ignitiondeck.com/idf/idcf_latest.zip';
-		if ( ini_get('allow_url_fopen') ) {
+		if (ini_get('allow_url_fopen') ) {
 			$idcf = file_get_contents($url);
 		} else {
 			$idcf_curl = curl_init();
@@ -205,7 +205,7 @@ function idf_fh_delivery() {
 			$subdomain = '';
 		}
 		$url = $prefix.'://'.$subdomain.'.ignitiondeck.com/idf/fh_latest.zip';
-		if ( ini_get('allow_url_fopen') ) {
+		if (ini_get('allow_url_fopen') ) {
 			$fh = file_get_contents($url);
 		} else {
 			$fh_curl = curl_init();
@@ -253,7 +253,7 @@ function idf_extension_list() {
 
 function idf_get_file($url) {
 	// download and return a file using allowed protocols
-	if ( ini_get('allow_url_fopen') ) {
+	if (ini_get('allow_url_fopen') ) {
 		$file = file_get_contents($url);
 	} else {
 		$curl = curl_init();
