@@ -45,6 +45,7 @@ if ($project_id > 0) {
 
 ?>
 
+
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'item' ); ?>>
 	<?php if ( $mini_deck->successful && ( $closed || 'open' == $mini_deck->end_type ) ) : ?>
 	<div class="campaign-ribbon success">
@@ -107,3 +108,10 @@ if ($project_id > 0) {
 		</ul>
 	</div>
 </article>
+
+<?php if ( is_active_sidebar( 'home_right_1' ) ) : ?>
+	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		<?php dynamic_sidebar( 'home_right_1' ); ?>
+	</div><!-- #primary-sidebar -->
+<?php endif; ?>
+
